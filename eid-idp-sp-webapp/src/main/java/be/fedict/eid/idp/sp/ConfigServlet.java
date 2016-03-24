@@ -54,7 +54,7 @@ public class ConfigServlet extends HttpServlet {
 
 		String baseLocation = idpBaseLocation;
 		if (null == baseLocation || baseLocation.trim().isEmpty()) {
-			baseLocation = "https://" + request.getServerName() + ":"
+			baseLocation = request.getScheme() + "://" + request.getServerName() + ":"
 					+ request.getServerPort() + "/eid-idp/";
 		}
 		if (!baseLocation.endsWith("/")) {

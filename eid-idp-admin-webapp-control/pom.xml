@@ -56,7 +56,29 @@
 		<dependency>
 			<groupId>org.jboss.ejb3</groupId>
 			<artifactId>jboss-ejb3-ext-api</artifactId>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <artifactId>getopt</artifactId>
+                    <groupId>gnu-getopt</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>xercesImpl</artifactId>
+                    <groupId>apache-xerces</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>dtdparser121</artifactId>
+                    <groupId>wutka-dtdparser</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jaxb-api</artifactId>
+                    <groupId>sun-jaxb</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>xml-apis</artifactId>
+                    <groupId>apache-xerces</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
